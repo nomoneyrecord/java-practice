@@ -8,6 +8,6 @@ public class TablesNeeded {
       int guests = scnr.nextInt();
       int tablesFilled = guests / tableSize; 
 
-      System
+      System.out.print("Tables filled: " + tablesFilled);
   }
 }
