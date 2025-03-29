@@ -1,4 +1,4 @@
-public class RubberDuck {
+public class RubberDuck extends Duck{
 
   //Override
   public String getBehavior(){
