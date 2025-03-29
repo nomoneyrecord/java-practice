@@ -16,7 +16,7 @@ public class DuckInfoOverride {
       md.setType(type);
       md.setName(name);
 
-      System.out.println(md.getName() + "the " + md.getType() + " duck " + md.getBehavior() + "!");
+      System.out.println(md.getName() + " the " + md.getType() + " duck " + md.getBehavior() + "!");
 
       type = scnr.next();
       name = scnr.next();
@@ -26,6 +26,6 @@ public class DuckInfoOverride {
       rd.setType(type);
       rd.setName(name);
 
-      System.out.println(md.getName() + "the " + md.getType() + " duck " + md.getBehavior() + "!");
+      System.out.println(rd.getName() + " the " + rd.getType() + " duck " + rd.getBehavior() + "!");
   }
 }
