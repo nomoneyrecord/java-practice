@@ -20,8 +20,11 @@ public class CustomerInfo {
         quantity = scnr.nextInt();
 
         grocery = new Grocery(item, price, quantity);
-        customer1.addGrocery(grocery);    
-      } while (sentinel.equals("y")); {
+        customer1.addGrocery(grocery);  
+
+        sentinel = scnr.next();
+
+      } while (sentinel.equals("y")); 
       
         System.out.println(name + " has the following items:\n");
 
@@ -33,6 +36,5 @@ public class CustomerInfo {
         }
 
         System.out.println("Total: " + total);
-      }
   }
 }
