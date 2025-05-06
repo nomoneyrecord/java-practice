@@ -59,6 +59,8 @@ public class StatePopulations {
       Scanner inFS = null;                   // Scanner object
       int myZipCode;
       int i;
+      String myStateAbbrev = ""; 
+      String myStateName = "";
       
       // ZIP code - state abbrev. pairs
       ArrayList<StatePair<Integer, String>> zipCodeState = new ArrayList<StatePair<Integer, String>>();
@@ -94,16 +96,26 @@ public class StatePopulations {
         
       for (i = 0; i < zipCodeState.size(); ++i) {
          // TODO: Using ZIP code, find state abbreviation
+         if(zipCodeState.get(i).getValue1().equals(myZipCode)){
+            myStateAbbrev = zipCodeState.get(i).getValue2();
+            break;  
+         }
       }
       
       
       for (i = 0; i < abbrevState.size(); ++i) {
          // TODO: Using state abbreviation, find state name
+         if(abbrevState.get(i).getValue1().equals(myStateAbbrev)){
+            myStateName = abbrevState.get(i).getValue2();
+         }
       }
       
       
       for (i = 0; i < statePopulation.size(); ++i) {
          // TODO: Using state name, find population. Print pair info.
+         if(statePopulation.get(i).getValue1().equals(myStateName)){
+            statePopulation.get(i).printInfo();
+         }
       }
    }
 }
