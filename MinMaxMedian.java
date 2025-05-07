@@ -1,35 +1,54 @@
-import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Scanner;
 
-public class LabProgram {
+public class MinMaxMedian {
 
    // Input 5 Integers and return the Integers in an ArrayList
    public static ArrayList<Integer> inputIntegers(Scanner scnr) {
-      /* Type your code here. */
+      ArrayList<Integer> list = new ArrayList<>();
+      for (int i = 0; i < 5; i++) {
+         list.add(scnr.nextInt());
+      }
+      return list;
    }
 
    // Input 5 Doubles and return the Doubles in an ArrayList
    public static ArrayList<Double> inputDoubles(Scanner scnr) {
-      /* Type your code here. */
+      ArrayList<Double> list = new ArrayList<>();
+      for (int i = 0; i < 5; i++) {
+         list.add(scnr.nextDouble());
+      }
+      return list;
    }
 
    // Input 5 Strings, and return the Strings in an ArrayList
    public static ArrayList<String> inputWords(Scanner scnr) {
-      /* Type your code here. */
+      ArrayList<String> list = new ArrayList<>();
+      for (int i = 0; i < 5; i++) {
+         list.add(scnr.next());
+      }
+      return list;
    }
 
    // Output the elements of the ArrayList parameter
    public static <TheType extends Comparable<TheType>>
       void print(ArrayList<TheType> list) {
-      /* Type your code here. */
+      for (TheType item : list) {
+         System.out.print(item + " ");
+      }
+      System.out.println();
    }
 
    // Return the min, median, and max of the ArrayList parameter in a new ArrayList
    public static <TheType extends Comparable<TheType>>
-      ArrayList<TheType> getStatistics(ArrayList<TheType> list)
-   {
-      /* Type your code here. */
+      ArrayList<TheType> getStatistics(ArrayList<TheType> list) {
+      Collections.sort(list);
+      ArrayList<TheType> stats = new ArrayList<>();
+      stats.add(list.get(0));       // Min
+      stats.add(list.get(2));       // Median (middle of 5 items)
+      stats.add(list.get(4));       // Max
+      return stats;
    }
 
    public static void main(String[] args) {
