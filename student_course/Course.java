@@ -10,7 +10,7 @@ public class Course implements Comparable<Course> {
 
   @Override 
   public int compareTo(Course otherCourse) {
-    int deptCompare = this.departement.compareTo(otherCourse.department); 
+    int deptCompare = this.department.compareTo(otherCourse.department); 
     if(deptCompare != 0){
       return deptCompare; 
     }
