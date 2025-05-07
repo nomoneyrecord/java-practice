@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class LabProgram {
+public class StudentCourse {
    public static void main(String[] args) {
       int j;
       Scanner scnr = new Scanner(System.in);
