@@ -1,5 +1,5 @@
-import java.util.Scanner;
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class StudentGrades {
        
@@ -22,7 +22,7 @@ public class StudentGrades {
       //       output new grade
       
       studentName = scnr.nextLine(); 
-      studentGrade = scnr.nextInt(); 
+      studentGrade = scnr.nextDouble(); 
       
       System.out.println(studentName + "'s original grade: " + studentGrades.get(studentName)); 
       studentGrades.put(studentName, studentGrade); 
