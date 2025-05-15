@@ -19,6 +19,18 @@ public class DescendingOrder {
    //       an integer array and the number of elements in the array as arguments, 
    //       and sorts the array into descending order.
    public static void selectionSortDescendTrace(int [] numbers, int numElements) {
+
+    for(int i = 0; i < numbers.length - 1; i++) {
+      int maxIndex = i; 
+      for(int j = i + 1; j < numbers.length; j++) {
+        if (numbers[j] > numbers[maxIndex]){
+          maxIndex = j; 
+        }
+      }
+      int temp = numbers[maxIndex];
+      numbers[maxIndex] = numbers[i]; 
+      numbers[i] = temp; 
+    }
       
    }
    
@@ -32,6 +44,8 @@ public class DescendingOrder {
 
       // TODO: Read in a list of up to 10 positive integers; stop when
       //       -1 is read. Then call selectionSortDescendTrace() method.
+
+      
 
    }
 }
