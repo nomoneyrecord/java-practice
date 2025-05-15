@@ -30,6 +30,7 @@ public class UniqueRandomIntegers {
         nextRand = randGen.nextInt(maxNum); 
         if (!alreadySeen.contains(nextRand)) {
           alreadySeen.add(nextRand); 
+          nums[i] = nextRand; 
           i++;
         } else {
           retries++; 
