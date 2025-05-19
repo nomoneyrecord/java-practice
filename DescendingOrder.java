@@ -20,9 +20,9 @@ public class DescendingOrder {
    //       and sorts the array into descending order.
    public static void selectionSortDescendTrace(int [] numbers, int numElements) {
 
-    for(int i = 0; i < numbers.length - 1; i++) {
+    for(int i = 0; i < numElements - 1; i++) {
       int maxIndex = i; 
-      for(int j = i + 1; j < numbers.length; j++) {
+      for(int j = i + 1; j < numElements; j++) {
         if (numbers[j] > numbers[maxIndex]){
           maxIndex = j; 
         }
@@ -30,6 +30,13 @@ public class DescendingOrder {
       int temp = numbers[maxIndex];
       numbers[maxIndex] = numbers[i]; 
       numbers[i] = temp; 
+      
+      for(int k = 0; k < numElements; k++) {
+        System.out.print(numbers[k] + " ");
+      }
+
+      System.out.println();
+
     }
       
    }
