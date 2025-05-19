@@ -44,8 +44,20 @@ public class DescendingOrder {
 
       // TODO: Read in a list of up to 10 positive integers; stop when
       //       -1 is read. Then call selectionSortDescendTrace() method.
+       
 
-      
+      while(numElements < 10){
+        input = scnr.nextInt();
+
+        if (input == -1) {
+          break;
+        }  
+
+        numbers[numElements] = input; 
+        numElements++; 
+      }
+
+      selectionSortDescendTrace(numbers, numElements);
 
    }
 }
